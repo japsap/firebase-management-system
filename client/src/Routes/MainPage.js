@@ -7,8 +7,6 @@ const MainPage = () => {
 
   const { currentUser } = getAuth();
 
-  console.log(currentUser);
-
   return (
     <div>
       MainPage <button onClick={logOut}>Log out</button>

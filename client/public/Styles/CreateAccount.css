@@ -49,7 +49,7 @@
 }
 
 .createAccount-container .credentials-container .credetials-inner-container{
-    width: 50%;
+    width: 60%;
 }
 
 
@@ -165,7 +165,7 @@
         height: 100vh;
     }
     .createAccount-container .credentials-container .credetials-inner-container{
-        width: 50%;
+        width: 60%;
     } 
 }
 
@@ -179,7 +179,7 @@
 
     .createAccount-container .credentials-container{
         width: 100%;
-        padding: 20px;
+        padding: 30px;
         height: 100vh;
     }
 
