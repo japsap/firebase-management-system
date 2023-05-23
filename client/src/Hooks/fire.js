@@ -7,6 +7,7 @@ import {
   signOut,
   signInWithEmailAndPassword,
   updateProfile,
+  sendEmailVerification,
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -28,13 +29,14 @@ export const auth = getAuth(fire);
 export async function createAccount(email, password, username) {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
+    await sendEmailVerification(auth.currentUser)
     await updateProfile(auth.currentUser, { displayName: username }).catch(
       (err) => console.log(err),
     );
 
     window.location.reload();
     
-    
+
   } catch (err) {
     console.log(err);
   }
