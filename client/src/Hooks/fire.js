@@ -26,9 +26,18 @@ const fire = initializeApp(firebaseConfig);
 export const auth = getAuth(fire);
 
 export async function createAccount(email, password, username) {
-  await createUserWithEmailAndPassword(auth, email, password).then((res) => {
-    return (res.user.displayName = username);
-  });
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    await updateProfile(auth.currentUser, { displayName: username }).catch(
+      (err) => console.log(err),
+    );
+
+    window.location.reload();
+    
+    
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 export async function logAccount(email, password) {

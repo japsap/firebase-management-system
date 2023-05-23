@@ -4,7 +4,7 @@ import React from "react";
 import { logOut } from "../Hooks/fire";
 
 const MainPage = () => {
-  
+
   const { currentUser } = getAuth();
 
   return (
