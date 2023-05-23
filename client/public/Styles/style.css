@@ -1,0 +1,29 @@
+@import url('./CreateAccount.css');
+
+:root {
+    --mainColor: #eb8160;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    color: gray;
+}
+
+.orange{
+    color: var(--mainColor);
+}
+ 
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mt-50{
+    margin-top: 50px;
+}
